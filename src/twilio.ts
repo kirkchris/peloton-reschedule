@@ -1,7 +1,7 @@
 import twilio from 'twilio';
 
-const ACCOUNT_SID = 'AC2d6f4ba871c58f976f61a32c158399cf'; // Your Account SID from www.twilio.com/console
-const AUTH_TOKEN = '03695a6bf46e6c6f6af3f80a94c407fd';   // Your Auth Token from www.twilio.com/console
+const ACCOUNT_SID = 'CYZ'; // Your Account SID from www.twilio.com/console
+const AUTH_TOKEN = 'CYZ';   // Your Auth Token from www.twilio.com/console
 const TO_NUMBER = '+19163357435';
 const FROM_NUMBER = '+12566009325';
 
