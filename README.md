@@ -5,12 +5,7 @@ Finds open schedule times via graphql, then attempts to reschedule if a newer ap
 ## Setup
 
 ### .env
-Create a .env file with your AWS credemtoa;s
-
-```
-AWS_ACCESS_KEY_ID=key
-AWS_SECRET_ACCESS_KEY=key
-```
+Fill in credentails into the `starting.env` file and save as a new file: `.env`
 
 
 ### serverless

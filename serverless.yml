@@ -14,6 +14,7 @@ provider:
 plugins:
   - serverless-plugin-typescript
   - serverless-offline
+  - serverless-dotenv-plugin
 
 package:
   exclude:
@@ -27,3 +28,9 @@ functions:
     handler: src/handler.run
     events:
       - schedule: rate(3 minutes)
+
+custom:
+  dotenv:
+    exclude:
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY

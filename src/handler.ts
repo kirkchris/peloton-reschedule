@@ -2,7 +2,7 @@ import fetch from 'isomorphic-fetch';
 import get from 'lodash/get';
 import { sendMessage } from './twilio';
 
-const ID = 'XYZ';
+const ID = process.env.PELOTON_ORDER_ID;
 
 const updateDelivery = async (newDelivery: any) => {
   const data = {
@@ -53,7 +53,7 @@ export const run = async () => {
 
     const response = await vals.json();
     console.log('response', response);
-    const currentDeliveryDate = new Date(get(response, ['data', 'order', 'deliveryPreference', 'date'], '2021-03-24'));
+    const currentDeliveryDate = new Date(get(response, ['data', 'order', 'deliveryPreference', 'date'], '2021-03-15'));
     const deliveryPreferences = get(response, ['data', 'order', 'availableDeliveries'], []);
     console.log('currentDeliveryDate', currentDeliveryDate);
     console.log('deliveryPreferences', deliveryPreferences);
@@ -75,6 +75,7 @@ export const run = async () => {
     }
   } catch (e) {
     console.error('in main processing error', e);
+    throw e;
   } finally {
     console.log('--- ending ---');
   }

@@ -28,6 +28,7 @@
     "istanbul": "^0.4.5",
     "lambda-tester": "^4.0.1",
     "nyc": "^15.0.1",
+    "serverless-dotenv-plugin": "^3.1.0",
     "serverless-offline": "^5.12.1",
     "serverless-plugin-typescript": "^1.1.9",
     "sinon": "^9.0.2",

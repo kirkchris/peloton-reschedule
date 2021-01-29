@@ -1,9 +1,9 @@
 import twilio from 'twilio';
 
-const ACCOUNT_SID = 'CYZ'; // Your Account SID from www.twilio.com/console
-const AUTH_TOKEN = 'CYZ';   // Your Auth Token from www.twilio.com/console
-const TO_NUMBER = '+19163357435';
-const FROM_NUMBER = '+12566009325';
+const ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID; // Your Account SID from www.twilio.com/console
+const AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN;   // Your Auth Token from www.twilio.com/console
+const TO_NUMBER = process.env.TWILIO_TO_NUMBER;
+const FROM_NUMBER = process.env.TWILIO_FROM_NUMBER;
 
 const client = twilio(ACCOUNT_SID, AUTH_TOKEN);
 
